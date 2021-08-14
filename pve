@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# This script provides a menu for activating a virtual environment. To invoke 
+# this script, you need to type
+#
+#     source $(./pve)
+#
+# from the command line
+
+PS3="Choose an environment: "
+
+folders=$(find ~/pve/. -type d -maxdepth 1 | sort -f | sed -E 's/(.+)\/(.+$)/\2/')
+
+select folder in ${folders[@]:1};
+do
+    echo ~/pve/$folder/bin/activate
+    break;
+done
