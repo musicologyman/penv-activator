@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# This script provides a menu for activating a virtual environment. To invoke 
-# this script, you need to type
+# This script provides a menu for activating a virtual environment. You need to
+# copy it (or an alias to it) to /usr/local/bin. To invoke this script, type 
 #
-#     source $(./pve)
+#     source $(pve)
 #
-# from the command line
+# from the command line.
 
 PS3="Choose an environment: "
 
